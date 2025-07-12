@@ -7,4 +7,4 @@ EXPOSE 8181
 #RUN unzip app.jar || true
 #ENTRYPOINT [ "java","org.springframework.boot.loader.launch.JarLauncher" ] 
 #\org\springframework\boot\loader\launch
-ENTRYPOINT [ "java","-jar","app.jar" ]
+ENTRYPOINT [ "java","-jar","app.jar" ]clea
