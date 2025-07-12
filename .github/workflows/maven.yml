@@ -30,4 +30,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build the docker image
-      run: docker build . --file Dockerfile --tag sample:$(date +%s)
+      run: docker build . --file Dockerfile --tag sample
