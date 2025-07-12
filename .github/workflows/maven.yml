@@ -31,3 +31,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Build the docker image
       run: docker build . --file Dockerfile --tag sample
+    - name: upload jar file
+      uses: actions/upload-artifact@v4
+      with: 
+        name: my-app
+        path: target/*.jar
