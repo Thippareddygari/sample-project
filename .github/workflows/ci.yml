@@ -51,15 +51,4 @@ jobs:
         push: true
         tags: kishornandhu/tcs-demo:latest
 
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION }}
-    - name: update kubeconfig
-      run: aws eks --region $AWS_REGION update-kubeconfig --name dev
-    - name: Deploy to EKS
-      run: |
-          kubectl apply -f k8s/deployment.yml
-          kubectl apply -f k8s/servce.yml
+    
