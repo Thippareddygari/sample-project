@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot-app
-          image: kishornandhu/tcs-demo:${{ github.sha }}
+          image: kishornandhu/tcs-demo
           ports:
             - containerPort: 80
               
