@@ -16,5 +16,5 @@ spec:
         - name: springboot-app
           image: kishornandhu/tcs-demo
           ports:
-            - containerPort: 8080
+            - containerPort: 8181
               
