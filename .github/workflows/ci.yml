@@ -43,6 +43,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: "kishornandhu/tcs-demo"
+        tags: "kishornandhu/tcs-demo:${{ github.sha }}"
 
     
