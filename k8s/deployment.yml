@@ -15,6 +15,7 @@ spec:
       containers:
         - name: springboot-app
           image: kishornandhu/tcs-demo:TAG_PLACEHOLDER
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
               
