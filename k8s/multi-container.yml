@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multipod
+  labels:
+    app: javawebapp
+spec:
+  containers:
+  - name: javawebappcontainer
+    image: kishornandhu/tcs-demo
+    ports:
+    - containerPort: 80
+  - name: nodeapp
+    image: kishornandhu/nodeapp
+    ports:
+    - containerPort: 9981
