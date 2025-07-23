@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .values.component }}
+  name: {{ .Values.component }}
   labels:
-    component: {{ .values.component }}
+    component: {{ .Values.component }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: {{ .values.component }}
+      component: {{ .Values.component }}
   template:
     metadata:
       labels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.component }}
-          image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .values.component }}
+          image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.component }}
           envFrom:
             - configMapRef:
-                name: {{ .values.component }} 
+                name: {{ .Values.component }} 
