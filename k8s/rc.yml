@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc
+spec:
+  replicas: 2
+  template:
+    metadata:
+      name: javapod
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: containername
+          image: kishornandhu/tcs-demo
+          ports:
+          - containerPort: 0
