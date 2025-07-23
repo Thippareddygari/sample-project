@@ -1,8 +1,22 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: pod
+  name: {{ .values.component }}
+  labels:
+    component: {{ .values.component }}
 spec:
-  containers:
-  - name: nginx
-    image: nginx
+  replicas: 1
+  selector:
+    matchLabels:
+      component: {{ .values.component }}
+  template:
+    metadata:
+      labels:
+        component: {{ .Values.component  }}
+    spec:
+      containers:
+        - name: {{ .Values.component }}
+          image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .values.component }}
+          envFrom:
+            - configMapRef:
+                name: {{ .values.component }} 
