@@ -1,4 +1,4 @@
-{{- define "common.lables"}}
+{{- define "common.labels"}}
   labels:
     appName: {{.Values.component }}
     project: roboshop
