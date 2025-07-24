@@ -19,7 +19,4 @@ spec:
       containers:
         - name: {{ .Values.component }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.component }}
-          # envFrom:
-          #   - configMapRef:
-          #       name: {{ .Values.component }} 
 ------------------------
