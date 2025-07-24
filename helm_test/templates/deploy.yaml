@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: test
   labels:
-    {{- include "common.labels" . | nindent 4 }}
+    {{- include "common.labels"  }}
 spec:
   containers:
   - name: nginx
