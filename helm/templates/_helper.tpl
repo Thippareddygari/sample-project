@@ -1,4 +1,4 @@
-{{- define "mychart.lables"}}
+{{- define "common.lables"}}
   labels:
     appName: {{.Values.component }}
     project: roboshop
