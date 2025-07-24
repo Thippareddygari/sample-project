@@ -3,6 +3,5 @@ kind: Deployment
 metadata:
   name: test
   labels: 
-    //{{ -include "common.labels" . | nindent 4 }}
     {{- include "common.labels" . | nindent 4 }}
     
