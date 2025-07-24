@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.component }}
   labels:
-    {{- template "common.labels"}
+    {{- template "common.labels"}}
 
 spec:
   replicas: 1
