@@ -5,3 +5,4 @@ metadata:
   name: helm-1
 data: 
   name: hello
+  release-name: {{ Release.Name }}
