@@ -6,3 +6,4 @@ metadata:
 data: 
   name: hello
   release-name: {{ .Release.Name }}
+  chart-version: {{ .Chart.Version }}
