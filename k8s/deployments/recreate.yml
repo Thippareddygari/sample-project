@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 matadata:
-  name: mavenappsvc
+  name: mavenapp-svc
   namespace: test-ns
 spec:
   type: NodePort
